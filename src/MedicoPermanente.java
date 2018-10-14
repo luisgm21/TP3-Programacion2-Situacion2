@@ -1,7 +1,6 @@
 
 public class MedicoPermanente extends Medico {
     private float sueldobase;
-     private float dineroadicional;
             
     @Override
     public float calcularSueldo() {

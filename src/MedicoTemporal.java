@@ -1,7 +1,6 @@
 
 public class MedicoTemporal extends Medico {
 
-    private float preciohr;
     private float hrstrabajadas;
     private float hrsextras;
     

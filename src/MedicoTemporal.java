@@ -8,8 +8,8 @@ public class MedicoTemporal extends Medico {
     private float hrstrabajadas;
     private float hrsextras;
 
-    public MedicoTemporal(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad, LocalDateTime fechaingreso, LocalDateTime fechaegreso) {
-        super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad, fechaingreso, fechaegreso);
+    public MedicoTemporal(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad) {
+        super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad);
     }
     public MedicoTemporal(){
         super();

@@ -1,14 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-public abstract class  Persona {
-    
-    private String nombre;
-    private String apellido;
-    private long numtelefono;
-    private String sexo;
-    private String fechanaci;
-    private String correo;
-    private String direccion;
-    
-    
+/**
+ *
+ * @author tigre
+ */
+public class Persona {
     
 }

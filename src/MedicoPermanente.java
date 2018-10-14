@@ -6,8 +6,8 @@ public class MedicoPermanente extends Medico {
     private float sueldobase;
     private float dineroadicional;
 
-    public MedicoPermanente(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad, LocalDateTime fechaingreso, LocalDateTime fechaegreso) {
-        super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad, fechaingreso, fechaegreso);
+    public MedicoPermanente(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad) {
+        super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad);
     }
     public MedicoPermanente(){
         super();

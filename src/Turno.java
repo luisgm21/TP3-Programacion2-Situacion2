@@ -3,33 +3,46 @@ import java.time.LocalDateTime;
 
 
 public class Turno {
-    private int numturn;
-    private String nombremedico;
-    private LocalDateTime fechayhora;
-    public Turno(int numturn,String nombremedico,LocalDateTime fechayhora){
-        this.numturn=numturn;
-        this.nombremedico=nombremedico;
-        this.fechayhora=fechayhora;
-    }
+    
+    private LocalDateTime horaentrada;
+    private LocalDateTime horasalida;
+    private Medico nombremedico;
+    
     public Turno(){
-        this.fechayhora=null;
+       horaentrada=null;
+       horasalida=null;
+   }
+
+   
+    public LocalDateTime getHoraentrada() {
+        return horaentrada;
     }
-    public int getNumturn() {
-        return numturn;
+
+    
+    public void setHoraentrada(LocalDateTime horaentrada) {
+        this.horaentrada = horaentrada;
     }
-    public void setNumturn(int numturn) {
-        this.numturn = numturn;
+
+    
+    public LocalDateTime getHorasalida() {
+        return horasalida;
     }
-    public String getNombremedico() {
+
+    public void setHorasalida(LocalDateTime horasalida) {
+        this.horasalida = horasalida;
+    }
+
+    
+    public Medico getNombremedico() {
         return nombremedico;
     }
-    public void setNombremedico(String nombremedico) {
+
+   
+    public void setNombremedico(Medico nombremedico) {
         this.nombremedico = nombremedico;
     }
-    public LocalDateTime getFechayhora() {
-        return fechayhora;
-    }
-    public void setFechayhora(LocalDateTime fechayhora) {
-        this.fechayhora = fechayhora;
-    }
+    
 }
+    
+
+  

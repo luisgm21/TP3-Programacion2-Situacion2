@@ -2,7 +2,7 @@
 import java.time.LocalDateTime;
 class Enfermedad {
     private String nombre;
-    private LocalDateTime fechadeinicio;
+    private String fechadeinicio;
     private String tipo;
 
     public String getNombre() {
@@ -13,11 +13,11 @@ class Enfermedad {
         this.nombre = nombre;
     }
 
-    public LocalDateTime getFechadeinicio() {
+    public String getFechadeinicio() {
         return fechadeinicio;
     }
 
-    public void setFechadeinicio(LocalDateTime fechadeinicio) {
+    public void setFechadeinicio(String fechadeinicio) {
         this.fechadeinicio = fechadeinicio;
     }
 

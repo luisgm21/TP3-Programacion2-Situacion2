@@ -32,9 +32,11 @@ public class CentrodeAtencion {
            {   
                MedicoTemporal x=new MedicoTemporal();
                System.out.println("Hay medicos temporales");
-               System.out.println(x.getNombre());
+               System.out.println(x.getNombre()); 
                
            }
+           
        }
    }
 }
+//morelli gato

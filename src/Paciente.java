@@ -1,13 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author tigre
- */
+import java.time.LocalDateTime;
+
+
 public class Paciente {
-    
+    private String historiaclinica;//Modelo, averiguar si hay una variable de 
+                                   //caracteres mas grande que String
+    private LocalDateTime fechadeingreso;
+    private Turno turnos;
+    private Medicamento medicamentos;
+    private Enfermedad enfermedades;
 }

@@ -1,4 +1,5 @@
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 
@@ -40,6 +41,11 @@ public class Turno {
    
     public void setNombremedico(Medico nombremedico) {
         this.nombremedico = nombremedico;
+    }
+    
+    public long Horastrabjadas(LocalDateTime horaentrada, LocalDateTime horasalida){
+        long horas= Duration.between(horaentrada, horasalida).toHours();
+        return horas;
     }
     
 }

@@ -4,38 +4,41 @@ import java.time.LocalDateTime;
 
 public class MedicoTemporal extends Medico {
 
-    private float preciohr;
-    private float hrstrabajadas;
+    private float costoh;
     private float hrsextras;
+    private float sueldo;
+    private Turno[] turno;
+    
 
     public MedicoTemporal(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad) {
         super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad);
+        costoh=100;
+        turno = new Turno[3]; 
     }
     public MedicoTemporal(){
         super();
     }
-    public void setPreciohr(float preciohr) {
-        this.preciohr = preciohr;
+    public void setCostohh(float preciohr) {
+        this.costoh = preciohr;
     }
 
     
-    public float getPreciohr() {
-        return preciohr;
+    public float getCostoh() {
+        return costoh;
     }
 
-    public float getHrstrabajadas() {
-        return hrstrabajadas;
-    }
+   
 
-    public float getHrsextras() {
-        return hrsextras;
-    }
-    
-    
-    
-    @Override
-    public float calcularSueldo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void calcularSueldo() {
+        long horastrab;
+        for(Turno turno : turno){
+            if(turno!=null){
+                horastrab=turno.Horastrabjadas(turno.getHoraentrada(),turno.getHorasalida());
+                sueldo= sueldo +(horastrab*costoh);
+            }
+        }
+        
+        System.out.println("El sueldo del medico es: "+ sueldo);
     }
     
 }

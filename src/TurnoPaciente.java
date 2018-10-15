@@ -1,4 +1,3 @@
-
 public class TurnoPaciente {
     private int numturn;
     private String nombremedico;

@@ -7,12 +7,17 @@ public class Turno {
     
     private LocalDateTime horaentrada;
     private LocalDateTime horasalida;
+    private LocalDateTime horaextraentrada;
+    private LocalDateTime horaextrasalida;
     private Medico nombremedico;
     
     public Turno(){
        horaentrada=null;
        horasalida=null;
+       horaextraentrada=null;
+       horaextrasalida=null;
    }
+    
 
    
     public LocalDateTime getHoraentrada() {
@@ -46,6 +51,34 @@ public class Turno {
     public long Horastrabjadas(LocalDateTime horaentrada, LocalDateTime horasalida){
         long horas= Duration.between(horaentrada, horasalida).toHours();
         return horas;
+    }
+
+    /**
+     * @return the horaextraentrada
+     */
+    public LocalDateTime getHoraextraentrada() {
+        return horaextraentrada;
+    }
+
+    /**
+     * @param horaextraentrada the horaextraentrada to set
+     */
+    public void setHoraextraentrada(LocalDateTime horaextraentrada) {
+        this.horaextraentrada = horaextraentrada;
+    }
+
+    /**
+     * @return the horaextrasalida
+     */
+    public LocalDateTime getHoraextrasalida() {
+        return horaextrasalida;
+    }
+
+    /**
+     * @param horaextrasalida the horaextrasalida to set
+     */
+    public void setHoraextrasalida(LocalDateTime horaextrasalida) {
+        this.horaextrasalida = horaextrasalida;
     }
     
 }

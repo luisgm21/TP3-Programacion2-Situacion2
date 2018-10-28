@@ -36,6 +36,12 @@ public class Principal {
         CentrodeAtencion sanasana= new CentrodeAtencion();
         Paciente paciente1;
         paciente1 = new Paciente("Luis Gonzalo","Morelli",154237910,"masculino","11_08_1997","gonzy.morelli@gmail.com","Mi casa");
+        Enfermedad enfermedad1= new Enfermedad("Resfrio","11 de Agosto","No Permanente");
+        Enfermedad enfermedad2= new Enfermedad("Cancer","2 Agosto","Permanente");
+        Enfermedad enfermedad3= new Enfermedad("VIH","2 Agosto","Permanente");
+        paciente1.agregarEnfermedad(enfermedad1);
+        paciente1.agregarEnfermedad(enfermedad2);
+        paciente1.agregarEnfermedad(enfermedad3);
         MedicoPermanente medico1=new MedicoPermanente("Agustin","Martinez",154678767,"masculino","12_08_1967","agu.martinez@outblook.com","su casa","Cardiolgo",20000 );
         MedicoTemporal medico2=new MedicoTemporal("Ramon","Rodriguez",15567612,"masculiono","23_02_1983","ramonelmasloco22@gmail.com","calle falsa123","pediatra");
         medico1.Agregarturno(turno1);
@@ -46,6 +52,8 @@ public class Principal {
         sanasana.agregarElemento(medico1);
         sanasana.agregarElemento(medico2);
         sanasana.leerElementos();
+        paciente1.acomodarEnfermedades();
+        paciente1.leerEnfermedad();
         medico1.calcularSueldo();
         medico2.calcularSueldo();
         

@@ -1,6 +1,7 @@
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 public class Paciente extends Persona {
        private String historiaclinica;//Modelo, averiguar si hay una variable de 
                                    //caracteres mas grande que String
@@ -11,8 +12,14 @@ public class Paciente extends Persona {
 
     public Paciente(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion) {
         super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion);
+        this.turnos = new ArrayList();
+        this.medicamentos = new ArrayList();
+        this.enfermedades = new ArrayList();
     }
     public Paciente(){
+        this.turnos = new ArrayList();
+        this.medicamentos = new ArrayList();
+        this.enfermedades = new ArrayList();
         
     }
     public void agregarTurno(TurnoPaciente turno){
@@ -23,6 +30,9 @@ public class Paciente extends Persona {
     }
     public void agregarEnfermedad(Enfermedad enfermedad){
         enfermedades.add(enfermedad);
+    }
+    public void acomodarEnfermedades(){
+        Collections.sort(enfermedades, new TipoEnfermedadComparator());
     }
     public void leerTurno(){
         for(TurnoPaciente object:turnos){

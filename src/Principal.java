@@ -40,7 +40,7 @@ public class Principal {
         MedicoTemporal medico2=new MedicoTemporal("Ramon","Rodriguez",15567612,"masculiono","23_02_1983","ramonelmasloco22@gmail.com","calle falsa123","pediatra");
         medico1.Agregarturno(turno1);
         medico1.Agregarturno(turno2);
-        medico2.Agregarturno(turno4);
+        medico2.Agregarturno(turno3);
         medico2.Agregarturnoextra(turnoextra);
         sanasana.agregarElemento(paciente1);
         sanasana.agregarElemento(medico1);

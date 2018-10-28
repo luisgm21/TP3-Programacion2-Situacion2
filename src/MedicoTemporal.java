@@ -15,7 +15,7 @@ public class MedicoTemporal extends Medico {
         super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad);
         costoh=100;
         costoextrah=250;
-        turno = new Turno[2]; 
+        turno = new Turno[1]; 
         turnoextra = new TurnoExtra[1];
     }
     public MedicoTemporal(){

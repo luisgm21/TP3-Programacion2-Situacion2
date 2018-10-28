@@ -31,8 +31,12 @@ public class Paciente extends Persona {
     public void agregarEnfermedad(Enfermedad enfermedad){
         enfermedades.add(enfermedad);
     }
-    public void acomodarEnfermedades(){
+    public void acomodarseguntipoEnfermedades(){
         Collections.sort(enfermedades, new TipoEnfermedadComparator());
+    }
+    public void acomodarsegunfechaEnfermedades(){
+        
+        Collections.sort(enfermedades, new FechaIniComparator());
     }
     public void leerTurno(){
         for(TurnoPaciente object:turnos){

@@ -1,15 +1,19 @@
 
+import java.time.LocalDateTime;
+
+
 
 class Enfermedad {
     private String nombre;
-    private String fechadeinicio;
+    private LocalDateTime fechadeinicio;
     private String tipo;
 
-    public Enfermedad(String nombre,String fechadeinicio,String tipo){
+    public Enfermedad(String nombre,LocalDateTime fechadeinicio,String tipo){
         this.nombre=nombre;
         this.fechadeinicio=fechadeinicio;
         this.tipo=tipo;
     }
+
     public String getNombre() {
         return nombre;
     }
@@ -18,11 +22,11 @@ class Enfermedad {
         this.nombre = nombre;
     }
 
-    public String getFechadeinicio() {
+    public LocalDateTime getFechadeinicio() {
         return fechadeinicio;
     }
 
-    public void setFechadeinicio(String fechadeinicio) {
+    public void setFechadeinicio(LocalDateTime fechadeinicio) {
         this.fechadeinicio = fechadeinicio;
     }
 

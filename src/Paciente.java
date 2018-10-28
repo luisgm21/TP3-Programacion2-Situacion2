@@ -1,5 +1,7 @@
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.Collections;
 public class Paciente extends Persona {
@@ -51,7 +53,7 @@ public class Paciente extends Persona {
     }
     public void leerEnfermedad(){
         for(Enfermedad object:enfermedades){
-            System.out.println("Nombre de Enfermedad: "+object.getNombre()+" "+"Tipo de enfermedad: "+object.getTipo());
+            System.out.println("Nombre de Enfermedad: "+object.getNombre()+" "+"Tipo de enfermedad: "+object.getTipo()+"  "+"Fecha: "+object.getFechadeinicio().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
         }
         
     }

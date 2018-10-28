@@ -13,30 +13,23 @@ public class Principal {
         Turno turno1 = new Turno();
         turno1.setHoraentrada(LocalDateTime.parse("14/10/2018 08:00:00", miFormatFecha));
         turno1.setHorasalida(LocalDateTime.parse("14/10/2018 14:00:00", miFormatFecha));
-        turno1.setHoraextraentrada(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
-        turno1.setHoraextrasalida(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
+        
 
         Turno turno2 = new Turno();
         turno2.setHoraentrada(LocalDateTime.parse("14/10/2018 15:00:00", miFormatFecha));
         turno2.setHorasalida(LocalDateTime.parse("14/10/2018 20:00:00", miFormatFecha));
-        turno2.setHoraextraentrada(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
-        turno2.setHoraextrasalida(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
-
+        
         Turno turno3 = new Turno();
         turno3.setHoraentrada(LocalDateTime.parse("14/10/2018 18:00:00", miFormatFecha));
         turno3.setHorasalida(LocalDateTime.parse("14/10/2018 23:59:59", miFormatFecha));
-        turno3.setHoraextraentrada(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
-        turno3.setHoraextrasalida(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
+        
         
         Turno turno4 = new Turno();
         turno4.setHoraentrada(LocalDateTime.parse("15/10/2018 00:00:01", miFormatFecha));
         turno4.setHorasalida(LocalDateTime.parse("15/10/2018 06:00:00", miFormatFecha));
-        turno4.setHoraextraentrada(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
-        turno4.setHoraextrasalida(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
         
-        Turno turnoextra = new Turno();
-        turnoextra.setHoraentrada(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
-        turnoextra.setHorasalida(LocalDateTime.parse("15/10/2018 00:00:00", miFormatFecha));
+        
+        TurnoExtra turnoextra = new TurnoExtra();
         turnoextra.setHoraextraentrada(LocalDateTime.parse("15/10/2018 04:00:00", miFormatFecha));
         turnoextra.setHoraextrasalida(LocalDateTime.parse("15/10/2018 08:00:00", miFormatFecha));
         
@@ -47,8 +40,8 @@ public class Principal {
         MedicoTemporal medico2=new MedicoTemporal("Ramon","Rodriguez",15567612,"masculiono","23_02_1983","ramonelmasloco22@gmail.com","calle falsa123","pediatra");
         medico1.Agregarturno(turno1);
         medico1.Agregarturno(turno2);
-        medico2.Agregarturno(turno3);
-        medico2.Agregarturno(turnoextra);
+        medico2.Agregarturno(turno4);
+        medico2.Agregarturnoextra(turnoextra);
         sanasana.agregarElemento(paciente1);
         sanasana.agregarElemento(medico1);
         sanasana.agregarElemento(medico2);

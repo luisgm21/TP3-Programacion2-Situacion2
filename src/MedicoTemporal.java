@@ -8,13 +8,15 @@ public class MedicoTemporal extends Medico {
     private float costoextrah;
     private float sueldo;
     private Turno[] turno;
+    private TurnoExtra[] turnoextra;
     
 
     public MedicoTemporal(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad) {
         super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad);
         costoh=100;
         costoextrah=250;
-        turno = new Turno[3]; 
+        turno = new Turno[2]; 
+        turnoextra = new TurnoExtra[1];
     }
     public MedicoTemporal(){
         super();
@@ -30,9 +32,19 @@ public class MedicoTemporal extends Medico {
     
     
     public void Agregarturno(Turno turnos){
-        for (int i=0; i<3 ; i++){
+        for (int i=0; i<2 ; i++){
             if (turno[i]==null){
                 turno[i]= turnos;
+                break;
+            }
+        }
+    }
+    
+    
+    public void Agregarturnoextra(TurnoExtra turnos){
+        for (int i=0; i<1 ; i++){
+            if (turnoextra[i]==null){
+                turnoextra[i]= turnos;
                 break;
             }
         }
@@ -41,15 +53,17 @@ public class MedicoTemporal extends Medico {
    
 
     public void calcularSueldo() {
-        long horastrab;
-        long horasextratrab;
+        long horastrab=0;
+        long horasextratrab=0;
         for(Turno object : turno){
             
-                horastrab=object.Horastrabjadas(object.getHoraentrada(),object.getHorasalida());
-                horasextratrab= object.Horastrabjadas(object.getHoraextraentrada(),object.getHoraextrasalida());
-                sueldo= sueldo +(horastrab*costoh) + (horasextratrab*costoextrah);
-            
+                horastrab= horastrab + object.Horastrabjadas(object.getHoraentrada(),object.getHorasalida());
+            }
+        for(TurnoExtra object : turnoextra){
+            horasextratrab= horasextratrab + object.Horasextratrabjadas(object.getHoraextraentrada(),object.getHoraextrasalida());
         }
+        
+        sueldo=(horastrab*costoh) + (horasextratrab*costoextrah);
         
         
         System.out.println("El sueldo del medico es: "+ sueldo);

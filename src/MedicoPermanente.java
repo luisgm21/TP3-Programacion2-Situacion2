@@ -28,6 +28,7 @@ public class MedicoPermanente extends Medico {
         for (int i=0; i<2 ; i++){
             if (turno[i]==null){
                 turno[i]= turnos;
+                
                 break;
             }
         }

@@ -8,9 +8,10 @@ public class MedicoPermanente extends Medico {
     private float sueldototal;
     private Turno[] turno;
 
-    public MedicoPermanente(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad) {
+    public MedicoPermanente(String nombre, String apellido, long numtelefono, String sexo, String fechanaci, String correo, String direccion, String especialidad, float sueldobase) {
         super(nombre, apellido, numtelefono, sexo, fechanaci, correo, direccion, especialidad);
         turno = new Turno[2]; 
+        this.sueldobase=sueldobase;
 
     }
     public MedicoPermanente(){
